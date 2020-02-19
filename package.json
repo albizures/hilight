@@ -1,0 +1,19 @@
+{
+	"name": "hilight",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"build": "parcel build src/index.html --no-source-maps --out-dir public",
+		"start": "parcel src/index.html"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@fullhuman/postcss-purgecss": "^2.0.6",
+		"autoprefixer": "^9.7.4",
+		"parcel": "^1.12.4",
+		"postcss-discard-comments": "^4.0.2",
+		"tailwindcss": "^1.2.0",
+		"typescript": "^3.7.5"
+	}
+}
