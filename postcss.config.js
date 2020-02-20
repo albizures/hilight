@@ -11,6 +11,7 @@ if (process.env.NODE_ENV === 'production') {
 	plugins.push(
 		purgecss({
 			content: ['./src/**/*.pug'],
+			whitelist: ['md:w-1/3', 'md:w-1/2', 'md:w-1/4'],
 		}),
 	);
 }
