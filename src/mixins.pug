@@ -1,0 +1,18 @@
+mixin columns
+	.px-2(class!=attributes.class)
+		.flex.flex-wrap.-mx-2
+			block
+
+mixin one-of-two
+	.w-full.px-2.self-center(class='md:w-1/2')
+		block
+
+mixin one-of-four
+	.w-full.px-2(class='md:w-1/4')
+		block
+
+mixin feature(icon, title, description)
+	.icon.border-red-600.border-2.rounded-lg.p-4.mb-4.text-center
+		img.inline(src=icon, aria-hidden='true')
+	h4.mb-2.font-pop.font-semibold.text-base= title
+	p.text-sm.text-gray-700= description

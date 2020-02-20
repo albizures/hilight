@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="94px" height="27px" viewBox="0 0 94 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HiLight_LP_Desktop" transform="translate(-146.000000, -54.000000)">
+            <g id="Logo" transform="translate(145.000000, 49.000000)">
+                <text id="Hilight" font-family="Poppins-Bold, Poppins" font-size="24" font-weight="bold" fill="#2F281E">
+                    <tspan x="0" y="25">Hilight</tspan>
+                </text>
+                <polygon id="Rectangle" fill="#FF4F4F" points="85 15 95 12 95 22 85 19"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

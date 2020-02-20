@@ -1,7 +1,10 @@
 module.exports = {
-  theme: {
-    extend: {}
-  },
-  variants: {},
-  plugins: []
+	theme: {
+		fontFamily: {
+			pop: ['Poppins', 'Arial', '"Noto Sans"', 'sans-serif'],
+		},
+		extend: {},
+	},
+	variants: {},
+	plugins: [],
 };
