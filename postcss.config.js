@@ -10,7 +10,7 @@ const plugins = [
 if (process.env.NODE_ENV === 'production') {
 	plugins.push(
 		purgecss({
-			content: ['./src/**/*.html'],
+			content: ['./src/**/*.pug'],
 		}),
 	);
 }
