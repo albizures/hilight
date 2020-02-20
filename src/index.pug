@@ -12,12 +12,12 @@ body
 	include mixins.pug
 	.circle
 	.container.mx-auto
-		header.flex.justify-between.py-4
+		header.flex.justify-between.py-4.px-2
 			img(src='./assets/Logo.svg', alt='HiLight logo')
 			button.bg-black.text-white.py-2.px-4.rounded
 				| I want a discount
 	.container.mx-auto
-		+columns.illustration.reading-illustration.mb-32
+		+columns.illustration.reading-illustration.mb-8(class='md:mb-32')
 			+one-of-two
 				h2.text-4xl.leading-tigh.mb-6.font-pop
 					| Highlight and organize your readings
@@ -26,12 +26,12 @@ body
 					| you did it a week after, we hate it too. That’s why we created
 					| HiLight. Read, highlight what matters you the most and we keep it
 					| organized for you.
-				button.bg-red-600.py-2.px-4.text-white.rounded
+				button.bg-red-600.py-2.px-4.text-white.rounded.mb-8(class='md:mb-0')
 					| I’m interested!
 			+one-of-two
 				img(src='./assets/Scene_3.png', alt='highlight screenshot')
 	.container.mx-auto
-		+columns.mb-32
+		+columns.mb-8(class='md:mb-32')
 			+one-of-four
 				+feature("./assets/atlas.svg", "Highlight", "Highlight while you read as you usually do.")
 			+one-of-four
@@ -42,7 +42,7 @@ body
 				+feature("./assets/user-astronaut.svg", "You before us.", "You make your HiLight flashcards as personalized as you want.")
 	.gradient
 		.container.mx-auto
-			+columns.mb-32
+			+columns.mb-8(class='md:mb-32')
 				+one-of-two
 					.illustration.flag-illustration
 						img(src='./assets/Scene_4.png', alt='highlight screenshot')
@@ -68,7 +68,7 @@ body
 							span.list-item-icon
 							| Free.
 	.container.mx-auto
-		+columns.rounded.bg-red-600.px-24.py-24.mb-16
+		+columns.bg-red-600.px-8.py-12.mb-16(class='md:px-24 md:rounded')
 			+one-of-two
 				p.text-white.self-center Wanna get a 20% discount when we launch?
 			+one-of-two
@@ -84,12 +84,12 @@ body
 						span.sr-only Submit
 	.container.mx-auto.mt-4
 		.px-2.mb-8
-			.flex.flex-wrap.-mx-2.justify-between.border-y-gray
-				.w-full.self-center(class='md:w-1/3')
+			.flex.flex-wrap.-mx-2.justify-between.border-y-gray.pt-8
+				.w-full.self-center.px-2(class='md:w-1/3')
 					img(src='./assets/Logo.svg', alt='hilight logo')
 					p.text-md.text-gray-700
 						| We really just want to make the reading in the internet better.
-				.w-full(class='md:w-1/3')
+				.w-full.px-2(class='md:w-1/3')
 					img(src='./assets/shutterstock_1388395853.png', alt='')
 	footer
 		p.text-center.mb-8 Made with 🖤 by HiLight, 2020.
