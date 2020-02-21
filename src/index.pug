@@ -1,18 +1,30 @@
 doctype html
+html(lang='en')
 head
 	meta(charset='UTF-8')
 	meta(name='viewport', content='width=device-width, initial-scale=1.0')
+	meta(name='Highlight and organize your readings')
 	title HiLight
 	link(
 		href='https://fonts.googleapis.com/css?family=Poppins&display=swap',
 		rel='stylesheet'
 	)
 	link(rel='stylesheet', href='./style.css')
+	if isProduction
+		script(async, src='https://www.googletagmanager.com/gtag/js?id=UA-113899183-3')
+		script.
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			
+			gtag('config', 'UA-113899183-3');
+			
 body
 	include mixins.pug
 	.circle
 	.container.mx-auto
 		header.flex.justify-between.py-4.px-2
+			h1.sr-only HiLight
 			img(src='./assets/Logo.svg', alt='HiLight logo')
 			button.bg-black.text-white.py-2.px-4.rounded
 				| I want a discount
@@ -26,26 +38,26 @@ body
 					| you did it a week after, we hate it too. That’s why we created
 					| HiLight. Read, highlight what matters you the most and we keep it
 					| organized for you.
-				button.bg-red-600.py-2.px-4.text-white.rounded.mb-8(class='md:mb-0')
+				button.bg-red-700.py-2.px-4.text-white.rounded.mb-8(class='md:mb-0')
 					| I’m interested!
 			+one-of-two
-				img(src='./assets/Scene_3.png', alt='highlight screenshot')
+				img(src='./assets/Scene_3.png', alt='hilight extension screenshot')
 	.container.mx-auto
 		+columns.mb-8(class='md:mb-32')
 			+one-of-four
-				+feature("./assets/atlas.svg", "Highlight", "Highlight while you read as you usually do.")
+				+feature('atlas', "Highlight", "Highlight while you read as you usually do.")
 			+one-of-four
-				+feature("./assets/Rectangle.svg", "Bookmark, better.", "Store every reading into awesome flashcards.")
+				+feature("bookmark", "Bookmark, better.", "Store every reading into awesome flashcards.")
 			+one-of-four
-				+feature("./assets/handshake.svg", "We’ll keep it clean.", "We auto-organize your readings. The more you highlight the better we organize.")
+				+feature("handshake", "We’ll keep it clean.", "We auto-organize your readings. The more you highlight the better we organize.")
 			+one-of-four
-				+feature("./assets/user-astronaut.svg", "You before us.", "You make your HiLight flashcards as personalized as you want.")
+				+feature("user", "You before us.", "You make your HiLight flashcards as personalized as you want.")
 	.gradient
 		.container.mx-auto
 			+columns.mb-8(class='md:mb-32')
 				+one-of-two
 					.illustration.flag-illustration
-						img(src='./assets/Scene_4.png', alt='highlight screenshot')
+						img(src='./assets/Scene_4.png', alt='hilight app screenshot')
 				+one-of-two
 					h2.text-4xl.leading-tight.mb-6.font-pop Bookmarks got better.
 					ul
@@ -68,20 +80,20 @@ body
 							span.list-item-icon
 							| Free.
 	.container.mx-auto
-		+columns.bg-red-600.px-8.py-12.mb-16(class='md:px-24 md:rounded')
+		+columns.bg-red-700.px-8.py-12.mb-16(class='md:px-24 md:rounded')
 			+one-of-two
 				p.text-white.self-center Wanna get a 20% discount when we launch?
 			+one-of-two
 				form.rounded.border-2.border-white-50.p-1.flex
-					label.sr-only(for='email') Enter your email
+					label.sr-only.text-white(for='email') Enter your email
 					input#email.bg-transparent.text-white.placeholder-gray-200.flex-1.p-1(
 						type='text',
 						name='email',
 						placeholder='Enter your email'
 					)
 					button
-						img.ml-2.mr-1(src='./assets/send-email.svg', alt='')
-						span.sr-only Submit
+						img.ml-2.mr-1(src='./assets/send-email.svg', alt='send icon')
+						span.sr-only.text-white Submit
 	.container.mx-auto.mt-4
 		.px-2.mb-8
 			.flex.flex-wrap.-mx-2.justify-between.border-y-gray.pt-8
@@ -90,6 +102,6 @@ body
 					p.text-md.text-gray-700
 						| We really just want to make the reading in the internet better.
 				.w-full.px-2(class='md:w-1/3')
-					img(src='./assets/shutterstock_1388395853.png', alt='')
+					img(src='./assets/shutterstock_1388395853.png', alt='Reader feeling good')
 	footer
 		p.text-center.mb-8 Made with 🖤 by HiLight, 2020.

@@ -13,7 +13,9 @@ mixin one-of-four
 
 mixin feature(icon, title, description)
 	.mb-2
-		.icon.border-red-600.border-2.rounded-lg.p-4.mb-4.text-center.mx-auto(class='md:mx-0')
-			img.inline(src=icon, aria-hidden='true')
-		h4.mb-2.font-pop.font-semibold.text-base.text-center(class='md:text-left')= title
+		.icon.border-red-600.border-2.rounded-lg.p-4.mb-4.text-center.mx-auto(
+			class="md:mx-0 " + icon
+		)
+			//- img.inline(src=icon, aria-hidden='true')
+		h3.mb-2.font-pop.font-semibold.text-base.text-center(class='md:text-left')= title
 		p.text-sm.text-gray-700.text-center(class='md:text-left')= description

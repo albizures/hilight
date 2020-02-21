@@ -116,6 +116,21 @@
 .icon {
 	width: 80px;
 	height: 80px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.atlas {
+	background-image: url('./assets/atlas.svg');
+}
+.bookmark {
+	background-image: url('./assets/Rectangle.svg');
+}
+.handshake {
+	background-image: url('./assets/handshake.svg');
+}
+.user {
+	background-image: url('./assets/user-astronaut.svg');
 }
 
 #email {
