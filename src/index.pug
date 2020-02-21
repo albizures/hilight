@@ -3,7 +3,7 @@ html(lang='en')
 head
 	meta(charset='UTF-8')
 	meta(name='viewport', content='width=device-width, initial-scale=1.0')
-	meta(name='Highlight and organize your readings')
+	meta(name='description', content='Highlight and organize your readings')
 	title HiLight
 	link(
 		href='https://fonts.googleapis.com/css?family=Poppins&display=swap',
@@ -26,7 +26,7 @@ body
 		header.flex.justify-between.py-4.px-2
 			h1.sr-only HiLight
 			img(src='./assets/Logo.svg', alt='HiLight logo')
-			button.bg-black.text-white.py-2.px-4.rounded
+			a.bg-black.text-white.py-2.px-4.rounded(href='#email')
 				| I want a discount
 	.container.mx-auto
 		+columns.illustration.reading-illustration.mb-8(class='md:mb-32')
@@ -38,7 +38,10 @@ body
 					| you did it a week after, we hate it too. That’s why we created
 					| HiLight. Read, highlight what matters you the most and we keep it
 					| organized for you.
-				button.bg-red-700.py-2.px-4.text-white.rounded.mb-8(class='md:mb-0')
+				a.bg-red-600.py-3.px-4.text-white.rounded.mb-8.inline-block(
+					class='md:mb-0',
+					href='#email'
+				)
 					| I’m interested!
 			+one-of-two
 				img(src='./assets/Scene_3.png', alt='hilight extension screenshot')
@@ -76,11 +79,13 @@ body
 						li.mb-2
 							span.list-item-icon
 							| Get access to original links.
-						li.mb-2
-							span.list-item-icon
-							| Free.
+					a.bg-red-600.py-3.px-4.text-white.rounded.mb-8.inline-block(
+						class='md:mb-0',
+						href='#email'
+					)
+						| Ok I need this, ASAP
 	.container.mx-auto
-		+columns.bg-red-700.px-8.py-12.mb-16(class='md:px-24 md:rounded')
+		+columns.bg-red-600.px-8.py-12.mb-16(class='md:px-24 md:rounded')
 			+one-of-two
 				p.text-white.self-center Wanna get a 20% discount when we launch?
 			+one-of-two
