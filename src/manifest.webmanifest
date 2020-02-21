@@ -1,9 +1,10 @@
 {
 	"name": "HiLight",
+	"description": "Highlight and organize your readings",
 	"short_name": "HiLight",
-	"theme_color": "#e53e3e",
-	"background_color": "#e53e3e",
-	"display": "browser",
+	"theme_color": "#E53E3e",
+	"background_color": "#E53E3E",
+	"display": "standalone",
 	"orientation": "portrait",
 	"Scope": "/",
 	"start_url": "/",
