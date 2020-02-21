@@ -2,7 +2,7 @@
 	"name": "HiLight",
 	"short_name": "HiLight",
 	"theme_color": "#e53e3e",
-	"background_color": "#ffffff",
+	"background_color": "#e53e3e",
 	"display": "browser",
 	"orientation": "portrait",
 	"Scope": "/",
