@@ -29,7 +29,7 @@ html(lang='en')
 			header.flex.justify-between.py-4.px-2
 				h1.sr-only HiLight
 				img(src='./assets/Logo.svg', alt='HiLight logo')
-				a.bg-black.text-white.py-2.px-4.rounded(href='#email')
+				a.bg-black.text-white.py-2.px-4.rounded(href='#mce-EMAIL')
 					| I want a discount
 		.container.mx-auto
 			+columns.illustration.reading-illustration.mb-8(class='md:mb-32')
@@ -43,7 +43,7 @@ html(lang='en')
 						| organized for you.
 					a.bg-red-600.py-3.px-4.text-white.rounded.mb-8.inline-block(
 						class='md:mb-0',
-						href='#email'
+						href='#mce-EMAIL'
 					)
 						| I’m interested!
 				+one-of-two
@@ -84,7 +84,7 @@ html(lang='en')
 								| Get access to original links.
 						a.bg-red-600.py-3.px-4.text-white.rounded.mb-8.inline-block(
 							class='md:mb-0',
-							href='#email'
+							href='#mce-EMAIL'
 						)
 							| Ok I need this, ASAP
 		.container.mx-auto
@@ -92,14 +92,28 @@ html(lang='en')
 				+one-of-two
 					p.text-white.self-center Wanna get a 20% discount when we launch?
 				+one-of-two
-					form.rounded.border-2.border-white-50.p-1.flex
-						label.sr-only.text-white(for='email') Enter your email
-						input#email.bg-transparent.text-white.placeholder-gray-200.flex-1.p-1(
-							type='text',
-							name='email',
+					form.rounded.border-2.border-white-50.p-1.flex.validate(
+						action='https://gmail.us20.list-manage.com/subscribe/post?u=8fa6b4bcc2abca5ae9ba887e6&amp;id=a492d23163',
+						method='post',
+						name='mc-embedded-subscribe-form',
+						target='_blank',
+						novalidate
+					)
+						label.sr-only.text-white(for='mce-EMAIL') Email Address
+						input#mce-EMAIL.bg-transparent.text-white.placeholder-gray-200.flex-1.p-1(
+							type='email',
+							value='',
+							name='EMAIL',
 							placeholder='Enter your email'
 						)
-						button
+						input(
+							hidden,
+							type='text',
+							name='b_8fa6b4bcc2abca5ae9ba887e6_a492d23163',
+							tabindex='-1',
+							value=''
+						)
+						button.button(type='submit', value='Subscribe', name='subscribe')
 							img.ml-2.mr-1(src='./assets/send-email.svg', alt='send icon')
 							span.sr-only.text-white Submit
 		.container.mx-auto.mt-4
@@ -113,3 +127,4 @@ html(lang='en')
 						img(src='./assets/shutterstock_1388395853.png', alt='Reader feeling good')
 		footer
 			p.text-center.mb-8 Made with 🖤 by HiLight, 2020.
+		script(src='./index.ts')
