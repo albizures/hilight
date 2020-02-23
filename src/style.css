@@ -46,7 +46,7 @@
 .reading-illustration::after {
 	background-image: url(./assets/ilustration_1.png);
 	background-position: bottom;
-	width: 100%;
+	width: 90%;
 	height: 270px;
 	bottom: -30%;
 	left: 10%;
@@ -133,7 +133,7 @@
 	background-image: url('./assets/user-astronaut.svg');
 }
 
-#email {
+#mce-EMAIL {
 	border-right: 2px solid rgba(255, 255, 255, 0.5);
 }
 
