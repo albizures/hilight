@@ -63,14 +63,14 @@ html(lang='en')
 				t.src=v;s=b.getElementsByTagName(e)[0];
 				s.parentNode.insertBefore(t,s)}(window, document,'script',
 				'https://connect.facebook.net/en_US/fbevents.js');
-				fbq('init', '2578340325713311');
+				fbq('init', '209926483723646');
 				fbq('track', 'PageView');
 			noscript
 				img(
 					height='1',
 					width='1',
 					style='display:none',
-					src='https://www.facebook.com/tr?id=2578340325713311&ev=PageView&noscript=1'
+					src='https://www.facebook.com/tr?id=209926483723646&ev=PageView&noscript=1'
 				)
 
 	body
@@ -143,7 +143,7 @@ html(lang='en')
 				+one-of-two
 					p.text-white.self-center Wanna get a 20% discount when we launch?
 				+one-of-two
-					form.rounded.border-2.border-white-50.p-1.flex.validate(
+					form#form_submit.rounded.border-2.border-white-50.p-1.flex.validate(
 						action='https://gmail.us20.list-manage.com/subscribe/post?u=8fa6b4bcc2abca5ae9ba887e6&amp;id=a492d23163',
 						method='post',
 						name='mc-embedded-subscribe-form',
@@ -179,3 +179,8 @@ html(lang='en')
 		footer
 			p.text-center.mb-8 Made with 🖤 by HiLight, 2020.
 		script(src='./index.ts')
+		script.
+			var form = document.getElementById('form_submit');
+			form.addEventListener('submit', function() {
+				fbq('track', 'Subscription');
+			}, false);
