@@ -80,7 +80,10 @@ html(lang='en')
 			header.flex.justify-between.py-4.px-2
 				h1.sr-only HiLight
 				img(src='./assets/Logo.svg', alt='HiLight logo')
-				a.bg-black.text-white.py-2.px-4.rounded(href='#mce-EMAIL')
+				a.bg-black.text-white.py-2.px-4.rounded(
+					href='#mce-EMAIL',
+					data-event='click_discount'
+				)
 					| I want a discount
 		.container.mx-auto
 			+columns.illustration.reading-illustration.mb-8(class='md:mb-32')
@@ -94,7 +97,8 @@ html(lang='en')
 						| organized for you.
 					a.bg-red-600.py-3.px-4.text-white.rounded.mb-8.inline-block(
 						class='md:mb-0',
-						href='#mce-EMAIL'
+						href='#mce-EMAIL',
+						data-event='click_interested'
 					)
 						| I’m interested!
 				+one-of-two
@@ -135,7 +139,8 @@ html(lang='en')
 								| Get access to original links.
 						a.bg-red-600.py-3.px-4.text-white.rounded.mb-8.inline-block(
 							class='md:mb-0',
-							href='#mce-EMAIL'
+							href='#mce-EMAIL',
+							data-event='click_asap'
 						)
 							| Ok I need this, ASAP
 		.container.mx-auto
@@ -184,3 +189,9 @@ html(lang='en')
 			form.addEventListener('submit', function() {
 				fbq('track', 'Subscription');
 			}, false);
+			for (var index = 0; index < links.length; index++) {
+				var link = links[index];
+				link.addEventListener('click', function (event) {
+				fbq('track', event.target.getAttribute('data-event'));
+				}, false);
+			}
