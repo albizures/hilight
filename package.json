@@ -16,7 +16,7 @@
 		"parcel": "^1.12.4",
 		"postcss-discard-comments": "^4.0.2",
 		"prettier": "^1.19.1",
-		"pug": "^2.0.4",
+		"pug": "^3.0.1",
 		"tailwindcss": "^1.2.0",
 		"typescript": "^3.7.5"
 	}
